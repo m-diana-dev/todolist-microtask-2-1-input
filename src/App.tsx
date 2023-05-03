@@ -20,11 +20,15 @@ function App() {
         ])
 
     }
+
+    const callBack = () => {
+
+    }
     return (
         <div className="App">
             {/*<FullInput addedMessage={addedMessage}/>*/}
             <Input/>
-            <Button/>
+            <Button name={'+'} callBack={callBack}/>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>

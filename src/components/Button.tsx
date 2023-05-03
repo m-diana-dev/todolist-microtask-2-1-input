@@ -1,10 +1,17 @@
 import React, {ChangeEvent, useState} from 'react';
 
-export const Button = (props:any) => {
+type ButtonPropsType = {
+    name: string
+    callBack: ()=>void
+}
+export const Button = (props: ButtonPropsType) => {
+    const onClickHandler = () => {
+        props.callBack();
+    }
 
     return (
         <div>
-            <button>+</button>
+            <button onClick={onClickHandler}>{props.name}</button>
         </div>
     );
 };
